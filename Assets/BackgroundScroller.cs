@@ -8,6 +8,8 @@ public class BackgroundScroller : MonoBehaviour
 
     public Rigidbody2D rb;
 
+    public bool Death = false;
+
 
     private float width;
 
@@ -28,17 +30,21 @@ public class BackgroundScroller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (transform.position.x < -width)
+       
+         if (transform.position.x < -width)
         {
-            Vector2 resetPosition = new Vector2(width * 2f, 0);
+            Vector2 resetPosition = new Vector2(width * 1.99f, 0);
             transform.position = (Vector2)transform.position + resetPosition;
             ResetObstacle();
 
         }
+        
         void ResetObstacle()
         {
-            transform.GetChild(0).localPosition = new Vector3(0, Random.Range(-4, 4), 0);
+            transform.GetChild(0).localPosition = new Vector3(0, Random.Range(-4, 5), 0);
         }
+        
+       
     }
 }
 
