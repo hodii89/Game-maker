@@ -5,8 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class PlayAgain : MonoBehaviour
 {
-public void OnButtonPress()
+public void OnMouseUp()
 {
-    SceneManager.LoadScene("GameOverScreen");
+    SceneManager.LoadScene("EndlessScene");
+        print("click");
 }
 }
