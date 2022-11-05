@@ -10,10 +10,11 @@ public class BackgroundScroller : MonoBehaviour
 
     public bool Death = false;
 
-
+  
+    
     private float width;
 
-    private float scrollSpeed = -20f;
+    private float scrollSpeed = -10f;
 
     void Start()
     {
@@ -37,14 +38,11 @@ public class BackgroundScroller : MonoBehaviour
         {
             Vector2 resetPosition = new Vector2(width * 1.98f, 0);
             transform.position = (Vector2)transform.position + resetPosition;
-            ResetObstacle();
+           
 
         }
         
-        void ResetObstacle()
-        {
-            transform.GetChild(0).localPosition = new Vector3(0, Random.Range(-4, 5), -1);
-        }
+        
         
        
     }
