@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BackgroundScroller : MonoBehaviour
+public class BackgroundScroller1 : MonoBehaviour
 {
     public BoxCollider2D collider;
 
@@ -14,7 +14,7 @@ public class BackgroundScroller : MonoBehaviour
     
     private float width;
 
-    private float scrollSpeed = -10f;
+    private float scrollSpeed = -20f;
 
     void Start()
     {

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class PlayAgain : MonoBehaviour
+public class PlayAgain1 : MonoBehaviour
 {
 public void OnButtonPress()
 {
