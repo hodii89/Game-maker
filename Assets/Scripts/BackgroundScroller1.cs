@@ -8,7 +8,7 @@ public class BackgroundScroller1 : MonoBehaviour
 
     public Rigidbody2D rb;
 
-    public bool Death = false;
+    //public bool Death = false;
 
   
     
