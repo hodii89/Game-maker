@@ -20,12 +20,18 @@ public class MeteorFlight : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
 
         width = collider.size.x;
-        collider.enabled = false;
+        collider.enabled = true;
 
         rb.velocity = new Vector2(FlightSpeed, 0);
     }
     void Update()
     {
-
+    }
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("WallOfFlesh"))
+        {
+            Destroy(gameObject);
+        }
     }
 }
