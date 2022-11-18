@@ -470,7 +470,7 @@ MonoBehaviour:
   theCountdown: 2
   xMinin: 20
   xMax: 22
-  yMinin: 0
+  yMinin: -0.8
   yMax: 8
 --- !u!4 &1840550922
 Transform:
@@ -480,7 +480,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1840550920}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 20.02, y: 4, z: -3.513059}
+  m_LocalPosition: {x: 20.02, y: 0, z: -3.513059}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -501,9 +501,13 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4161775489600275712, guid: 2767d76a605406e4ab0967e9248b7ea5, type: 3}
+      propertyPath: m_Simulated
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4161775489600275713, guid: 2767d76a605406e4ab0967e9248b7ea5, type: 3}
       propertyPath: m_IsTrigger
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4161775489600275714, guid: 2767d76a605406e4ab0967e9248b7ea5, type: 3}
       propertyPath: m_RootOrder
