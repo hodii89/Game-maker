@@ -14,7 +14,7 @@ public class BackgroundScroller1 : MonoBehaviour
     
     private float width;
 
-    private float scrollSpeed = -20f;
+    public float scrollSpeed = -20f;
 
     void Start()
     {

@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class PlayerController1 : MonoBehaviour
 {
+    public float shotDelay;
     public GameObject Shot;
     public Rigidbody2D rb;
     public float moveSpeed = 5;
@@ -14,15 +15,20 @@ public class PlayerController1 : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+     public void Update()
     {
+        theCountdown -= Time.deltaTime;
         float moveDirection = Input.GetAxisRaw("Vertical");
         rb.velocity = new Vector2(0, moveDirection * moveSpeed);
 
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetButtonDown("Fire1") theCountdown <= 0 ) 
         {
             Instantiate(Shot, transform.position, Quaternion.identity);
+            theCountdown = waitingForNextSpawn;
         }
+        
+        
+
     }
     void OnTriggerEnter2D(Collider2D other)
     {

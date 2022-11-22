@@ -6,13 +6,12 @@ using UnityEngine;
 public class MeteorFlight : MonoBehaviour
 {
     public BoxCollider2D collider;
-
     public Rigidbody2D rb;
 
 
     private float width;
 
-    private float FlightSpeed = -20f;
+    public float FlightSpeed = -15f;
 
     void Start()
     {
