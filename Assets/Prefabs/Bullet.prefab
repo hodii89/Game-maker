@@ -31,6 +31,7 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -8.52, y: 8.1, z: -1.3630002}
   m_LocalScale: {x: 0.7650577, y: 0.18602832, z: 0.66}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -99,7 +100,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3e438dc66cad9f49a0c5db6f22f10a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 40
   damage: 0
 --- !u!61 &8121091449506068517
 BoxCollider2D:
@@ -160,5 +161,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3e438dc66cad9f49a0c5db6f22f10a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 40
   damage: 0
