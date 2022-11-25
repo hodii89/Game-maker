@@ -6,29 +6,27 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
-    public float worldSrollingSpeed = 0.2f;
-    public Text scoreText;
-    public float score;
 
-    void Start()
+    public Text scoreText;
+    //public Text Highscore;
+
+        int score = 0;
+
+    private void Awake()
     {
-        if (instance == null) instance = this;
+      instance = this;
     }
 
     // Update is called once per frame
-    void Update()
+    void Start()
     {
-        
+        scoreText.text = score.ToString() + " COINS";
     }
-
-    void FixedUpdate()
+    public void AddPoint() 
     {
-        score += worldSrollingSpeed;
-        UpdateOnScreenScore();
+        score += 1;
+        scoreText.text = score.ToString() + " COINS";
     }
-    void UpdateOnScreenScore()
-    {
-        scoreText.text = score.ToString("0");
-    }
+   
 }
 
