@@ -5,7 +5,8 @@ using UnityEngine;
 public class ShotTimer : MonoBehaviour
     
 {
-    
+     ParticleSystem ps;
+
     public float RangeT2;
     public float theCountdown = 0f;
     public float waitingForNextSpawn = 3f;
@@ -17,7 +18,10 @@ public class ShotTimer : MonoBehaviour
     public Sprite T6;
     public Sprite T7;
 
-    
+    private void Start()
+    {
+       ps = GetComponent<ParticleSystem>();
+    }
     // Update is called once per frame
     public void Update()
     {
@@ -31,6 +35,7 @@ public class ShotTimer : MonoBehaviour
         else if (Input.GetButtonDown("Fire1"))
         {
             theCountdown = waitingForNextSpawn;
+            ps.Play();
         }
 
         if(theCountdown <= 3f && theCountdown >= 2.5f)
@@ -60,7 +65,7 @@ public class ShotTimer : MonoBehaviour
          if (theCountdown <= 0f)
         {
             GetComponent<SpriteRenderer>().sprite = T7;
-
+            
         }
-    }
+    } 
 }

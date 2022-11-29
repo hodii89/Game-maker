@@ -21,6 +21,9 @@ public class PlayerController1 : MonoBehaviour
         theCountdown -= Time.deltaTime;
         float moveDirection = Input.GetAxisRaw("Vertical");
         rb.velocity = new Vector2(0, moveDirection * moveSpeed);
+
+
+
         if (theCountdown >= 0)
         {
 

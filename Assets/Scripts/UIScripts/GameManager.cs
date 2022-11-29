@@ -20,12 +20,12 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Start()
     {
-        scoreText.text = score.ToString() + " COINS";
+        scoreText.text = score.ToString() + " CREDITS";
     }
     public void AddPoint() 
     {
         score += 1;
-        scoreText.text = score.ToString() + " COINS";
+        scoreText.text = score.ToString() + " CREDITS";
     }
    
 }

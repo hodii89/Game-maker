@@ -22,9 +22,6 @@ public class Coin : MonoBehaviour
 
         rb.velocity = new Vector2(FlightSpeed, 0);
     }
-    void Update()
-    {
-    }
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Player"))
@@ -32,5 +29,11 @@ public class Coin : MonoBehaviour
             Destroy(gameObject);
             GameManager.instance.AddPoint();
         }
+
+        if (other.gameObject.CompareTag("WallOfFlesh"))
+        
+            {
+                Destroy(gameObject);
+            }
     }
 }
