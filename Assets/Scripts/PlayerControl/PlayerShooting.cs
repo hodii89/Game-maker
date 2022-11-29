@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerShooting : MonoBehaviour
 {
+    public ParticleSystem MeteorEXP;
     public int speed = 5;
     public int damage;
 
@@ -24,6 +25,7 @@ public class PlayerShooting : MonoBehaviour
             Destroy(other.gameObject);
             Destroy(gameObject);
         }
+        
     }
 }
 

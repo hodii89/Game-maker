@@ -23,9 +23,7 @@ public class MeteorFlight : MonoBehaviour
 
         rb.velocity = new Vector2(FlightSpeed, 0);
     }
-    void Update()
-    {
-    }
+    
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("WallOfFlesh"))

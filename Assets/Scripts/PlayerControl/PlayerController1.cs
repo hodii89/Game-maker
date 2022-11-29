@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class PlayerController1 : MonoBehaviour
 {
+    
     public float theCountdown = 0f;
     public float waitingForNextSpawn = 3f;
     public GameObject Shot;
@@ -32,6 +33,7 @@ public class PlayerController1 : MonoBehaviour
         {
             Instantiate(Shot, transform.position, Quaternion.identity);
             theCountdown = waitingForNextSpawn;
+
         }
         
         
