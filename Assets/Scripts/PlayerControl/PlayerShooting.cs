@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class PlayerShooting : MonoBehaviour
 {
-    public ParticleSystem MeteorEXP;
     public int speed = 5;
     public int damage;
 
@@ -12,6 +11,7 @@ public class PlayerShooting : MonoBehaviour
     void Start()
     {
         GetComponent<Rigidbody2D>().velocity = new Vector3(speed, 0, -1);
+      
     }
 
     void OnBecameInvisible()

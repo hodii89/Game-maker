@@ -10,7 +10,7 @@ public class MeteorFlight : MonoBehaviour
 
 
     private float width;
-
+    public GameObject effect;
     public float FlightSpeed = -15f;
 
     void Start()
@@ -28,6 +28,11 @@ public class MeteorFlight : MonoBehaviour
     {
         if (other.gameObject.CompareTag("WallOfFlesh"))
         {
+            Destroy(gameObject);
+        }
+        if (other.gameObject.CompareTag("Bullet"))
+        {
+            Instantiate(effect, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
     }

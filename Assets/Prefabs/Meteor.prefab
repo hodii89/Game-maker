@@ -148,4 +148,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collider: {fileID: 0}
   rb: {fileID: 0}
+  effect: {fileID: 1634565012329270003, guid: 60a650660f5ba8646a227db2584e9103, type: 3}
   FlightSpeed: -15
