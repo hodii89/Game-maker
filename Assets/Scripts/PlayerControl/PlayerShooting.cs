@@ -6,7 +6,7 @@ public class PlayerShooting : MonoBehaviour
 {
     public int speed = 5;
     public int damage;
-    public CameraShake cameraShake;
+   // public CameraShake cameraShake;
 
     // Start is called before the first frame update
    void Start()
@@ -23,7 +23,7 @@ public class PlayerShooting : MonoBehaviour
     {
         if (other.tag != "Player")
         {
-            StartCoroutine(cameraShake.Shake(.15f, .4f));
+           // StartCoroutine(cameraShake.Shake(.15f, .4f));
             Destroy(other.gameObject);
             Destroy(gameObject);
         }

@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class PlayerController1 : MonoBehaviour
 {
-    
+    public CameraShake cameraShake;
     public float theCountdown = 3f;
     public float waitingForNextSpawn = 3f;
     public GameObject Shot;
@@ -31,8 +31,10 @@ public class PlayerController1 : MonoBehaviour
         }
         else if (Input.GetButtonDown("Fire1")) 
         {
+            StartCoroutine(cameraShake.Shake(1f, .4f));
             Instantiate(Shot, transform.position, Quaternion.identity);
             theCountdown = waitingForNextSpawn;
+           
 
         }
         
