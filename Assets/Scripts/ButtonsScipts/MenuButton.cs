@@ -5,7 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class MenuButton: MonoBehaviour
 {
-public void OnButtonPress()
+    public void Start()
+    {
+        DontDestroyOnLoad(gameObject);
+    }
+
+    public void OnButtonPress()
 {
     SceneManager.LoadScene("StartScreen");
    

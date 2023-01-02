@@ -31,6 +31,7 @@ public class PlayerController1 : MonoBehaviour
         }
         else if (Input.GetButtonDown("Fire1")) 
         {
+            GetComponent<AudioSource>().Play();
             StartCoroutine(cameraShake.Shake(1f, .4f));
             Instantiate(Shot, transform.position, Quaternion.identity);
             theCountdown = waitingForNextSpawn;
