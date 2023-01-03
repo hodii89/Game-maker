@@ -4,55 +4,57 @@ using UnityEngine;
 
 public class RandomPlacment : MonoBehaviour
 {
-    //Array of objects to spawn (note I've removed the private goods variable)
+   
     public GameObject[] theGoodies;
 
-    //Time it takes to spawn theGoodies
+  
     [Space(3)]
     public float waitingForNextSpawn = 10;
     public float theCountdown = 10;
 
-    // the range of X
+  
     [Header("X Spawn Range")]
     public float xMinin;
      public float xMax;
  
-     // the range of y
+  
      [Header("Y Spawn Range")]
     public float yMinin;
      public float yMax;
  
  
-     void Start()
-    {
-    }
 
     public void Update()
     {
-        // timer to spawn the next goodie Object
+        
         theCountdown -= Time.deltaTime;
         if (theCountdown <= 0)
         {
             SpawnGoodies();
             theCountdown = waitingForNextSpawn;
         }
-    }
 
+        
+    }
+    
 
     void SpawnGoodies()
     {
-        // Defines the $$anonymous$$ and max ranges for x and y
+      
         Vector2 pos = new Vector2(Random.Range(xMinin, xMax), Random.Range(yMinin, yMax));
 
-        // Choose a new goods to spawn from the array (note I specifically call it a 'prefab' to avoid confusing myself!)
+   
+
         GameObject goodsPrefab = theGoodies[Random.Range(0, theGoodies.Length)];
 
-        // Creates the random object at the random 2D position.
+        if
+        {
+            transform.rotation = Quaternion.Euler(transform.rotation.x, transform.rotation.y, Random.Range(0, 360));
+        }
+
         Instantiate(goodsPrefab, pos, transform.rotation);
 
-        // If I wanted to get the result of instantiate and fiddle with it, I might do this ins$$anonymous$$d:
-        //GameObject newGoods = (GameObject)Instantiate(goodsPrefab, pos)
-        //newgoods.something = somethingelse;
+        
     }
 }
     
