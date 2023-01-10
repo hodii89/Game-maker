@@ -26,7 +26,18 @@ public class Coin : MonoBehaviour
 
         rb.velocity = new Vector2(FlightSpeed, 0);
         psc = GetComponent<ParticleSystem>();
+
+
     }
+
+    void Update()
+    {
+        if (gameObject.transform.rotation.eulerAngles.z != 0)
+         {
+             transform.rotation = Quaternion.Euler(new Vector3(0, 0, 0));
+         }
+    }
+
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Player"))

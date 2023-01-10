@@ -152,7 +152,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 2
+  m_Constraints: 6
 --- !u!198 &5068313811631689580
 ParticleSystem:
   m_ObjectHideFlags: 0

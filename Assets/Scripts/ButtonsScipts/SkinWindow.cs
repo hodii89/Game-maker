@@ -1,14 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SkinWindow : MonoBehaviour
 {
-    public GameObject skinWindow;
 
-public void OnButtonPress()
+    public void OnButtonPress()
     {
-        skinWindow.SetActive(true);
-    }
+        SceneManager.LoadScene("Credits");
 
+    }
 }
